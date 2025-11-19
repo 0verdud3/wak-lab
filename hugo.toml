@@ -8,3 +8,4 @@ theme = "ananke"
 author = "WAK-Lab"
 description = "Verein und Hackerspace"
 logo = "images/logo.png"
+logoOnHome = true

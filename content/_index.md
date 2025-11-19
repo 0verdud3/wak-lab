@@ -1,7 +1,7 @@
----
-title: "WAK-Lab"
++++
+title = "WAK-Lab"
 logo = "images/logo.png"
----
++++
 
 
 Willkommen auf der Vereinsseite des WAK-Lab.

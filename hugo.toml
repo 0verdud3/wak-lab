@@ -7,3 +7,4 @@ theme = "ananke"
 [params]
 author = "WAK-Lab"
 description = "Verein und Hackerspace"
+logo = "images/logo.png"

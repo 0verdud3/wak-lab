@@ -1,5 +1,7 @@
 ---
 title: "WAK-Lab"
+description = "Technik, Kreativität & Experimente"
+logo = "images/logo.png"
 ---
 
 

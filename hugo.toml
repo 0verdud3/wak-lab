@@ -5,7 +5,9 @@ theme = "beautifulhugo"
 
 
 [params]
-author = "WAK-Lab"
-description = "Verein und Hackerspace"
-logo = "images/logo.png"
-logoOnHome = true
+  [params.author]
+    name = "WAK-Lab"
+    link = "https://www.wak-lab.org"
+
+  description = "Verein und Hackerspace"
+  logo = "images/logo.png"

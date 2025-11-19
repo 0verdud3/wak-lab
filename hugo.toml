@@ -1,0 +1,9 @@
+baseURL = "https://www.wak-lab.org/"
+languageCode = "de-de"
+title = "WAK-Lab"
+theme = "ananke"
+
+
+[params]
+author = "WAK-Lab"
+description = "Verein und Hackerspace"

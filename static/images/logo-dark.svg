@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="12" fill="#0b1220"/>
+  <path d="M60 20 L90 50 L60 80 L30 50 Z" fill="#19b2b2"/>
+  <circle cx="60" cy="50" r="8" fill="#00ff8c"/>
+  <text x="60" y="105" font-family="Fira Code, monospace" font-size="14" fill="#e6eef6" text-anchor="middle">WAK‑LAB</text>
+</svg>

@@ -1,13 +1,56 @@
 baseURL = "https://0verdud3.github.io/wak-lab/"
+baseURL = "https://wak-lab.org"
+title = "Wak‑Lab"
+theme = "waklab-theme"
 languageCode = "de-de"
-title = "WAK-Lab"
-theme = "beautifulhugo"
+defaultContentLanguage = "de"
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
 
 [params]
-  [params.author]
-    name = "WAK-Lab"
-    link = "https://www.wak-lab.org"
+  primaryColor = "#19b2b2"
+  accentColor = "#00c88a"
+  neonColor = "#00ff8c"
+  logoText = "WAK‑LAB"
+  showDonate = true
+  footerText = "© 2025 Wak‑Lab e.V. · Hackerspace · Makerspace · Chaostreff"
 
-  description = "Verein und Hackerspace"
-  logo = "images/logo.png"
+[menu]
+
+  [[menu.main]]
+    identifier = "projekte"
+    name = "Projekte"
+    url = "/projekte/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "mitmachen"
+    name = "Mitmachen"
+    url = "/mitmachen/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "events"
+    name = "Events"
+    url = "/events/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "ueber-uns"
+    name = "Über uns"
+    url = "/ueber-uns/"
+    weight = 40
+
+  [[menu.utility]]
+    identifier = "spenden"
+    name = "Spenden"
+    url = "/spenden/"
+    weight = 50
+
+  [[menu.utility]]
+    identifier = "suche"
+    name = "Suche"
+    url = "/suche/"
+    weight = 60

@@ -1,11 +1,14 @@
 +++
-title = "WAK-Lab"
-logo = "images/logo.png"
+title: "Startseite"
+description: "Willkommen im Wak‑Lab Hackerspace, Makerspace und Chaostreff"
 +++
 
+Willkommen im Wak‑Lab!  
+Wir sind ein offener Raum für Technik, Kreativität und Gemeinschaft. Ob du lötest, programmierst, druckst oder einfach neugierig bist – bei uns findest du Gleichgesinnte und spannende Projekte.
 
-Willkommen auf der Vereinsseite des WAK-Lab.
+**Was dich erwartet:**
+- Hardware- und Softwareprojekte
+- Workshops und offene Basteltage
+- Austausch mit Hackern, Machern und kreativen Köpfen
 
-
-- Neuigkeiten findet ihr unter **News**.
-- Über uns unter **About**.
+👉 [Mitmachen](/mitmachen/) · [Projekte](/projekte/) · [Events](/events/)

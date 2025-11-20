@@ -1,0 +1,49 @@
+<section class="hero site-grid" aria-label="Hero">
+  <div class="hero-inner">
+    <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem">
+      <div aria-hidden="true" style="width:48px;height:48px;border-radius:8px;background:linear-gradient(90deg,var(--turquoise),var(--neon));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800">W</div>
+      <div>
+        <div style="font-size:.85rem;color:var(--subtext);font-weight:700">Wak‑Lab</div>
+        <div class="wordmark" style="font-size:1.05rem">Hackerspace · Makerspace · Chaostreff</div>
+      </div>
+    </div>
+
+    <h1>DAS WAK‑LAB — Hackerspace · Makerspace · Chaostreff</h1>
+    <p class="lead">Wir bauen, lernen und teilen Technik mit Neugier und Respekt. Komm vorbei, bring deine Ideen mit und mach mit.</p>
+
+    <div class="hero-cta">
+      <a href="/mitmachen/" class="btn btn-primary">MITMACHEN</a>
+      <a href="/events/" class="btn btn-ghost">NÄCHSTE EVENTS</a>
+    </div>
+
+    <div class="cards" style="margin-top:1.25rem">
+      <article class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h4 style="margin:0">Projekte auf einen Blick</h4>
+          <span class="badge">3 aktiv</span>
+        </div>
+        <p style="margin:.6rem 0 0 0;color:var(--subtext)">Hardware, Firmware und Workshops — Kurzinfos zu laufenden Projekten.</p>
+      </article>
+
+      <article class="card">
+        <h4 style="margin:0">So kannst du mitmachen</h4>
+        <p style="margin:.6rem 0 0 0;color:var(--subtext)">Besuche uns / Mitglied werden / Projektbeteiligung.</p>
+      </article>
+
+      <article class="card">
+        <h4 style="margin:0">Nächste Termine</h4>
+        <p style="margin:.6rem 0 0 0;color:var(--subtext)">Workshops, Meetups und offene Basteltage.</p>
+      </article>
+    </div>
+  </div>
+
+  <aside class="aside-card" aria-hidden="false">
+    <h3>Live Terminal</h3>
+    <div id="terminal" class="terminal" aria-live="polite" role="status">Waktage starten...
+    </div>
+    <div style="margin-top:.9rem;display:flex;gap:.5rem;justify-content:flex-end">
+      <a class="btn btn-ghost" href="/kontakt/">Kontakt</a>
+      <a class="btn" style="border:1px solid var(--grid)" href="/projekte/">Alle Projekte</a>
+    </div>
+  </aside>
+</section>

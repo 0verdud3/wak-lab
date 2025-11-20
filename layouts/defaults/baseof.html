@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ "css/theme.css" | relURL }}">
+</head>
+<body>
+
+  {{ partial "header.html" . }}
+
+  {{ if .IsHome }}
+    {{ partial "hero.html" . }}
+  {{ end }}
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "footer.html" . }}
+  <script src="{{ "js/terminal.js" | relURL }}" defer></script>
+</body>
+</html>

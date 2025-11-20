@@ -1,6 +1,6 @@
 +++
-title: "Startseite"
-description: "Willkommen im Wak‑Lab Hackerspace, Makerspace und Chaostreff"
+title = "Startseite"
+description = "Willkommen im Wak‑Lab Hackerspace, Makerspace und Chaostreff"
 +++
 
 Willkommen im Wak‑Lab!  

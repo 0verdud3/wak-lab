@@ -126,3 +126,34 @@ small{color:rgba(255,255,255,0.45)}
 
 /* Accessibility focus */
 a:focus, button:focus { outline:3px solid rgba(0,255,140,0.16); outline-offset:2px; border-radius:6px }
+
+/* Container (optional zentrieren / Größe anpassen) */
+#cursor-only {
+  display: inline-block;       /* inline / block / flex je nach Bedarf */
+  width: 1ch;                  /* Platz für den Cursor */
+  height: 1.1em;               /* Höhe passend zur Schriftgröße */
+  vertical-align: middle;
+  background: transparent;
+}
+
+/* Block-Cursor (Standardeinstellung) */
+.wak-cursor {
+  display: inline-block;
+  width: 0.9ch;                /* Breite des Cursors (Block) */
+  height: 100%;
+  background: #00ff8c;         /* Farbe des Cursors (neon) */
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(0,255,140,0.35);
+  animation: wak-blink 1s steps(1, start) infinite;
+}
+
+/* Alternativ: dünner Strich statt Block
+.wak-cursor { width: 2px; }
+*/
+
+/* Blink-Animation */
+@keyframes wak-blink {
+  0%   { opacity: 1; transform: scaleY(1); }
+  50%  { opacity: 0; transform: scaleY(0.9); }
+  100% { opacity: 1; transform: scaleY(1); }
+}

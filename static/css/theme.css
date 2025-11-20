@@ -1,219 +1,195 @@
-/* ----------------------------------------------------
-   WAK-LAB HUGO THEME – STYLE
-   basiert auf Screenshot (Dark Hero + Light Content)
------------------------------------------------------ */
-
-/* ---------- ROOT COLORS ---------- */
+/* -----------------------------------------------------------
+   Base Styles + Variables
+----------------------------------------------------------- */
 :root {
-    --color-bg-dark: #1c2a38;
-    --color-bg-light: #f4f7fa;
-    --color-accent: #9efc4f;
-    --color-accent-dark: #71c732;
-    --color-text: #1c2a38;
-    --color-text-light: #ffffff;
-    --color-text-gray: #8a9aa8;
-    --color-border-light: #e6ebef;
-    --color-circuit: rgba(158, 252, 79, 0.18);
+  --primary: #19b2b2;
+  --accent: #00c88a;
+  --neon: #00ff8c;
+
+  /* Light Mode */
+  --bg: #f6f6f6;
+  --bg-alt: #ffffff;
+  --text: #1a1a1a;
+  --text-light: #444;
+  --border: #cccccc;
 }
 
-/* ---------- BASE RESET ---------- */
+[data-theme="dark"] {
+  /* Dark Mode */
+  --bg: #0f172a;
+  --bg-alt: #1e293b;
+  --text: #e2e8f0;
+  --text-light: #cbd5e1;
+  --border: #334155;
+}
+
+/* -----------------------------------------------------------
+   Layout Basis
+----------------------------------------------------------- */
+
 body {
-    font-family: "Inter", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: var(--color-bg-light);
-    color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-    font-weight: 700;
-    margin: 0;
+/* Standardisierte Seitenbreite */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
 
-p {
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* ----------------------------------------------------
-   HEADER / NAVIGATION
------------------------------------------------------ */
+/* -----------------------------------------------------------
+   Header
+----------------------------------------------------------- */
 header {
-    background: var(--color-bg-dark);
-    padding: 22px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
 }
 
-header .logo {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
-
-header .logo-text {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--color-text-light);
+header img {
+  height: 80px;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 35px;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  list-style: none;
 }
 
-nav ul li a {
-    text-decoration: none;
-    font-weight: 600;
-    color: var(--color-text-light);
-    opacity: 0.9;
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
 }
 
-nav ul li a:hover {
-    color: var(--color-accent);
+nav a:hover {
+  color: var(--primary);
 }
 
-/* Active menu item (green) */
-nav ul li.active a {
-    color: var(--color-accent);
+/* Utility Menü */
+.utility-nav {
+  display: flex;
+  gap: 1.5rem;
 }
 
-/* ----------------------------------------------------
-   HERO SECTION
------------------------------------------------------ */
+/* -----------------------------------------------------------
+   Hero Section
+----------------------------------------------------------- */
 .hero {
-    background: var(--color-bg-dark);
-    color: var(--color-text-light);
-    padding: 90px 50px 120px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+  text-align: center;
+  padding: 4rem 2rem;
 }
 
 .hero h1 {
-    font-size: 2.9rem;
-    margin-bottom: 22px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    opacity: 0.95;
+  font-size: 1.2rem;
+  color: var(--text-light);
 }
 
-/* Call-to-action button */
-.btn-primary {
-    display: inline-block;
-    margin-top: 35px;
-    padding: 14px 38px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    border: 2px solid var(--color-accent);
-    border-radius: 7px;
-    color: var(--color-accent);
-    text-decoration: none;
-    transition: 0.2s ease;
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  margin: 1rem 0.3rem;
+  border-radius: 0.4rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.btn-primary:hover {
-    background: var(--color-accent);
-    color: var(--color-bg-dark);
+.button:hover {
+  background: var(--accent);
 }
 
-/* Circuit-Board background (left + right) */
-.hero::before,
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 420px;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.22;
+/* -----------------------------------------------------------
+   Footer
+----------------------------------------------------------- */
+footer {
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-light);
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
 }
 
-.hero::before {
-    left: -20px;
-    background-image: url("/circuit-left.svg");
+/* -----------------------------------------------------------
+   Projektlisten / Content
+----------------------------------------------------------- */
+h2, h3, h4 {
+  color: var(--text);
 }
 
-.hero::after {
-    right: -20px;
-    background-image: url("/circuit-right.svg");
+/* Karten / Boxen */
+.card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  padding: 1.5rem;
+  margin: 1rem 0;
 }
 
+/* -----------------------------------------------------------
+   Dark-Mode Toggle Button (optional)
+----------------------------------------------------------- */
 
-/* ----------------------------------------------------
-   "AUF EINEN BLICK" SECTION
------------------------------------------------------ */
-.section-light {
-    background: var(--color-bg-light);
-    padding: 90px 50px;
-    text-align: center;
+.theme-toggle {
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--text);
+  font-size: 0.9rem;
 }
 
-.section-light h2 {
-    color: var(--color-bg-dark);
-    font-size: 2.4rem;
-    margin-bottom: 22px;
+.theme-toggle:hover {
+  border-color: var(--primary);
 }
 
-.section-light p {
-    max-width: 650px;
-    margin: 0 auto;
-    color: var(--color-text);
-    font-size: 1.15rem;
+/* -----------------------------------------------------------
+   Links / Globals
+----------------------------------------------------------- */
+a {
+  color: var(--primary);
 }
 
-/* Icon circle (neon green) */
-.section-light .icon {
-    width: 120px;
-    height: 120px;
-    border-radius: 100%;
-    border: 4px solid var(--color-accent);
-    margin: 0 auto 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+a:hover {
+  color: var(--accent);
 }
 
-/* Decorative circuits */
-.section-light::before,
-.section-light::after {
-    content: "";
-    position: absolute;
-    width: 380px;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.22;
+/* -----------------------------------------------------------
+   Fix: Linker / Rechter Rand
+----------------------------------------------------------- */
+
+body, header, footer {
+  padding-left: max(1.5rem, env(safe-area-inset-left));
+  padding-right: max(1.5rem, env(safe-area-inset-right));
 }
 
-.section-light::before {
-    left: 0;
-    background-image: url("/circuit-left-light.svg");
+/* Damit keine Elemente mehr "kleben" */
+header,
+footer,
+.hero,
+main {
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.section-light::after {
-    right: 0;
-    background-image: url("/circuit-right-light.svg");
-}
-
-
-/* ----------------------------------------------------
-   UTILITY
------------------------------------------------------ */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Make sure spacing feels like your screenshot */
-.mt-1 { margin-top: 10px; }
-.mt-2 { margin-top: 20px; }
-.mt-3 { margin-top: 40px; }
-.mt-4 { margin-top: 80px; }

@@ -20,35 +20,35 @@ defaultContentLanguage = "de"
   [[menu.main]]
     identifier = "projekte"
     name = "Projekte"
-    url = "/projekte/"
+    url = "/wak-lab/projekte/"
     weight = 10
 
   [[menu.main]]
     identifier = "mitmachen"
     name = "Mitmachen"
-    url = "/mitmachen/"
+    url = "/wak-lab/mitmachen/"
     weight = 20
 
   [[menu.main]]
     identifier = "events"
     name = "Events"
-    url = "/events/"
+    url = "/wak-lab/events/"
     weight = 30
 
   [[menu.main]]
     identifier = "ueber-uns"
     name = "Über uns"
-    url = "/ueber-uns/"
+    url = "/wak-lab/ueber-uns/"
     weight = 40
 
   [[menu.utility]]
     identifier = "spenden"
     name = "Spenden"
-    url = "/spenden/"
+    url = "/wak-lab/spenden/"
     weight = 50
 
   [[menu.utility]]
     identifier = "suche"
     name = "Suche"
-    url = "/suche/"
+    url = "/wak-lab/suche/"
     weight = 60

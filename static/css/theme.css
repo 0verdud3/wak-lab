@@ -1,195 +1,128 @@
-/* -----------------------------------------------------------
-   Base Styles + Variables
------------------------------------------------------------ */
-:root {
+/* === Wak-Lab Dark Neon Theme === */
+:root{
+  --bg: #071018;
+  --surface: #0f1720;
+  --panel: #0b1220;
   --primary: #19b2b2;
   --accent: #00c88a;
   --neon: #00ff8c;
-
-  /* Light Mode */
-  --bg: #f6f6f6;
-  --bg-alt: #ffffff;
-  --text: #1a1a1a;
-  --text-light: #444;
-  --border: #cccccc;
+  --muted: rgba(255,255,255,0.03);
+  --text: #e6eef6;
+  --subtext: #9fb0bf;
+  --mono: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  --ui: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius: 10px;
+  --shadow: 0 12px 36px rgba(0,0,0,0.6);
 }
 
-[data-theme="dark"] {
-  /* Dark Mode */
-  --bg: #0f172a;
-  --bg-alt: #1e293b;
-  --text: #e2e8f0;
-  --text-light: #cbd5e1;
-  --border: #334155;
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:
+    radial-gradient(1200px 800px at 10% 10%, rgba(0,200,138,0.03), transparent 6%),
+    radial-gradient(900px 600px at 90% 90%, rgba(25,178,178,0.02), transparent 6%),
+    var(--bg);
+  color:var(--text);
+  font-family:var(--ui);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  font-size:16px;
 }
 
-/* -----------------------------------------------------------
-   Layout Basis
------------------------------------------------------------ */
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+/* subtle circuit/grid overlay */
+.site-grid::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:
+    linear-gradient(0deg, rgba(25,178,178,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(25,178,178,0.02) 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events:none;
+  z-index:0;
+  opacity:0.55;
 }
 
-/* Standardisierte Seitenbreite */
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
+/* Container helper */
+.container{max-width:1100px;margin:0 auto;padding:0 1.25rem;position:relative;z-index:2}
+
+/* Header */
+.header{
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1rem 0;border-bottom:1px solid var(--muted);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+  position:sticky; top:0; z-index:40; backdrop-filter: blur(6px);
+}
+.brand{display:flex;align-items:center;gap:.75rem}
+.logo{height:44px;width:auto;filter:drop-shadow(0 6px 18px rgba(0,200,138,0.06))}
+.wordmark{font-family:var(--mono);color:var(--neon);font-weight:800;letter-spacing:0.06em;font-size:1.05rem}
+
+/* Navigation */
+.nav{display:flex;gap:.6rem;align-items:center}
+.nav a{
+  color:var(--subtext);text-decoration:none;padding:.45rem .65rem;border-radius:8px;font-weight:600;font-size:.95rem;
+}
+.nav a:hover{color:var(--text);background:rgba(255,255,255,0.02);box-shadow:0 6px 20px rgba(0,0,0,0.45)}
+.nav .sep{opacity:.24;margin:0 .35rem}
+
+/* Hero */
+.hero{padding:4.25rem 0 3.25rem 0;display:grid;grid-template-columns:1fr 360px;gap:1.25rem;align-items:center}
+.hero-left{padding-right:1rem}
+.hero h1{font-family:var(--mono);font-size:2.6rem;line-height:1.02;margin-bottom:.6rem;color:var(--neon);text-shadow:0 6px 28px rgba(0,255,140,0.03)}
+.hero .subtitle{font-size:1.1rem;color:var(--subtext);margin-bottom:1.25rem;max-width:42rem}
+.cta-row{display:flex;gap:.85rem;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.6rem .95rem;border-radius:10px;font-weight:800;border:0;cursor:pointer;text-decoration:none;
+  background:linear-gradient(90deg,var(--primary),var(--accent));color:#061018;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text);font-weight:700;padding:.55rem .9rem;border-radius:10px}
+
+/* Right column card (terminal) */
+.hero-aside{display:flex;flex-direction:column;gap:.85rem}
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);padding:1rem;border-radius:12px;box-shadow:var(--shadow);min-height:64px;
 }
 
-/* -----------------------------------------------------------
-   Header
------------------------------------------------------------ */
-header {
-  width: 100%;
-  padding: 1.5rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--bg-alt);
-  border-bottom: 1px solid var(--border);
+/* Terminal (live) */
+.terminal{
+  font-family:var(--mono);color:var(--neon);
+  background: linear-gradient(180deg, rgba(2,6,10,0.36), rgba(2,6,10,0.28));
+  padding:1rem;border-radius:8px;border:1px solid rgba(25,178,178,0.12);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.6);white-space:pre-wrap;min-height:72px;font-size:0.95rem;
 }
 
-header img {
-  height: 80px;
+/* Section headline style */
+.section-title{font-family:var(--mono);font-size:1.05rem;color:var(--neon);margin:2rem 0 1rem 0;letter-spacing:0.08em}
+
+/* Cards grid for "Auf einen Blick" */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:.75rem}
+.info-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);padding:1rem;border-radius:10px;min-height:110px;box-shadow:0 8px 28px rgba(0,0,0,0.55);
+}
+.info-card h3{font-family:var(--mono);color:var(--primary);margin-bottom:.5rem;font-size:1rem}
+.info-card p{color:var(--subtext);font-size:.98rem}
+
+/* Footer */
+.footer{padding:2.25rem 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--subtext);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;font-size:0.92rem}
+.footer a{color:var(--subtext);text-decoration:none}
+.footer a:hover{color:var(--neon)}
+
+/* Utilities */
+h2{font-family:var(--mono);color:var(--neon);margin-bottom:.6rem}
+p{margin-bottom:1rem;color:var(--subtext)}
+a{color:var(--accent)}
+small{color:rgba(255,255,255,0.45)}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr;padding:2.25rem 0}
+  .hero-aside{order:2}
+  .hero-left{order:1}
+  .nav{display:none}
+  .container{padding:0 1rem}
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: var(--primary);
-}
-
-/* Utility Menü */
-.utility-nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-/* -----------------------------------------------------------
-   Hero Section
------------------------------------------------------------ */
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.hero h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: var(--text-light);
-}
-
-/* Buttons */
-.button {
-  display: inline-block;
-  padding: 0.7rem 1.4rem;
-  margin: 1rem 0.3rem;
-  border-radius: 0.4rem;
-  background: var(--primary);
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.button:hover {
-  background: var(--accent);
-}
-
-/* -----------------------------------------------------------
-   Footer
------------------------------------------------------------ */
-footer {
-  margin-top: 3rem;
-  padding: 2rem;
-  text-align: center;
-  color: var(--text-light);
-  background: var(--bg-alt);
-  border-top: 1px solid var(--border);
-}
-
-/* -----------------------------------------------------------
-   Projektlisten / Content
------------------------------------------------------------ */
-h2, h3, h4 {
-  color: var(--text);
-}
-
-/* Karten / Boxen */
-.card {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 0.4rem;
-  padding: 1.5rem;
-  margin: 1rem 0;
-}
-
-/* -----------------------------------------------------------
-   Dark-Mode Toggle Button (optional)
------------------------------------------------------------ */
-
-.theme-toggle {
-  cursor: pointer;
-  padding: 0.4rem 0.8rem;
-  border-radius: 0.3rem;
-  border: 1px solid var(--border);
-  background: var(--bg-alt);
-  color: var(--text);
-  font-size: 0.9rem;
-}
-
-.theme-toggle:hover {
-  border-color: var(--primary);
-}
-
-/* -----------------------------------------------------------
-   Links / Globals
------------------------------------------------------------ */
-a {
-  color: var(--primary);
-}
-
-a:hover {
-  color: var(--accent);
-}
-
-/* -----------------------------------------------------------
-   Fix: Linker / Rechter Rand
------------------------------------------------------------ */
-
-body, header, footer {
-  padding-left: max(1.5rem, env(safe-area-inset-left));
-  padding-right: max(1.5rem, env(safe-area-inset-right));
-}
-
-/* Damit keine Elemente mehr "kleben" */
-header,
-footer,
-.hero,
-main {
-  margin-left: auto;
-  margin-right: auto;
-}
+/* Accessibility focus */
+a:focus, button:focus { outline:3px solid rgba(0,255,140,0.16); outline-offset:2px; border-radius:6px }

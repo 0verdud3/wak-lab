@@ -1,26 +1,20 @@
-<header class="header">
+<header class="header container">
   <div class="brand">
-    <a href="{{ "/wak.lab" | relURL }}">
-      <!-- Logo hell/dunkel -->
-      <img src="{{ "images/logo.png" | relURL }}" alt="Wak‑Lab Logo" class="logo light-mode">
+    <a href="{{ "/" | relURL }}">
+      <img src="{{ "images/logo-dark.svg" | relURL }}" alt="WaK-Lab" class="logo">
     </a>
-    <span class="wordmark">WAK‑LAB e.V.</span>
+    <div class="wordmark">WaK•Lab</div>
   </div>
-  <div>
-        <div style="font-size:.85rem;color:var(--subtext);font-weight:700">Wak‑Lab</div>
-        <div class="wordmark" style="font-size:1.05rem">Hackerspace · Makerspace · Chaostreff</div>
-</div>
-  <!-- Hauptnavigation -->
-  <nav class="main-nav">
-    {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}">{{ .Name }}</a>
-    {{ end }}
-  </nav>
 
-  <!-- Utility-Menü (Spenden, Suche) -->
-  <nav class="utility-nav">
-    {{ range .Site.Menus.utility }}
-      <a href="{{ .URL }}">{{ .Name }}</a>
-    {{ end }}
+  <nav class="nav" aria-label="Hauptnavigation">
+    <a href="{{ "/" | relURL }}">Home</a>
+    <span class="sep">|</span>
+    <a href="/events/">Events</a>
+    <span class="sep">|</span>
+    <a href="/projekte/">Projekte</a>
+    <span class="sep">|</span>
+    <a href="/ueber-uns/">Über Uns</a>
+    <span class="sep">|</span>
+    <a href="/mitmachen/" class="btn-outline">Mitmachen</a>
   </nav>
 </header>

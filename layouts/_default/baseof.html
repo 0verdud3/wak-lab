@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ .Title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ "css/theme.css" | relURL }}">
 </head>
-<body>
+<body class="site-grid">
 
   {{ partial "header.html" . }}
 
@@ -19,6 +19,7 @@
   </main>
 
   {{ partial "footer.html" . }}
+
   <script src="{{ "js/terminal.js" | relURL }}" defer></script>
 </body>
 </html>

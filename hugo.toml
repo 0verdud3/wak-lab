@@ -1,6 +1,5 @@
 baseURL = "https://0verdud3.github.io/wak-lab/"
 title = "Wak‑Lab"
-theme = "waklab-theme"
 languageCode = "de-de"
 defaultContentLanguage = "de"
 

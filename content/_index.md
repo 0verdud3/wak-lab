@@ -11,4 +11,4 @@ Wir sind ein offener Raum für Technik, Kreativität und Gemeinschaft. Ob du lö
 - Workshops und offene Basteltage
 - Austausch mit Hackern, Machern und kreativen Köpfen
 
-👉 [Mitmachen](/mitmachen/) · [Projekte](/projekte/) · [Events](/events/)
+👉 [Mitmachen](/wak.lab/mitmachen/) · [Projekte](/wak.lab/projekte/) · [Events](/wak.lab/events/)

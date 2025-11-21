@@ -1,13 +1,14 @@
 +++
-title = "Offener Abend"
-date = 2025-11-27
-location = "Wak‑Lab, Werkraum 2"
-tags = ["community", "einsteiger"]
+title = "3D-Drucker Umbau auf Klipper"
+date = 2025-10-15
+tags = ["3d-druck", "klipper", "raspberry-pi"]
 status = "aktiv"
-repo = ""
+repo = "https://git.waklab.org/3d-klipper"
 +++
 
-Jeden Mittwoch ab 18:00 Uhr: Komm vorbei, schau rein, bring Fragen oder Projekte mit.  
-Keine Anmeldung nötig – einfach neugierig sein!
+Wir rüsten unsere Drucker auf Klipper um – für mehr Speed, Präzision und Remote‑Steuerung.
 
-**Themen:** Einstieg, Rundgang, Mitmachen
+**Umbauten:**
+- Raspberry Pi + OctoPrint
+- neue Stepper-Treiber
+- konfigurierbare Macros

@@ -1,6 +1,9 @@
 {{ define "main" }}
 <article class="container">
-  <h1>{{ .Title }}</h1>
+  <header>
+    <h1>{{ .Title }}</h1>
+    <p class="meta">Datum: {{ .Date.Format "2006-01-02" }} · Tags: {{ range $i, $t := .Params.tags }}{{ if $i }}, {{ end }}{{ $t }}{{ end }}</p>
+  </header>
   <div class="content">
     {{ .Content }}
   </div>

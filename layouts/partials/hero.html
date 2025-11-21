@@ -30,7 +30,7 @@
           <h3>Neueste Events</h3>
             <p>
               {{ range first 6 (where .Site.Pages "Section" "events") }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — {{ .Date.Format "2006-01-02" }}</li>
+                <a href="{{ .RelPermalink }}">{{ .title }}</a> — {{ .Date.Format "2006-01-02" }}
               {{ end }}
             </p>
         </div>

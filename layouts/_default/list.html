@@ -1,6 +1,42 @@
 {{ define "main" }}
-<section>
+<section class="container">
   <h1>{{ .Title }}</h1>
-  {{ .Content }}
+
+  {{ if .Content }}
+    <div class="section-intro">
+      {{ .Content }}
+    </div>
+  {{ end }}
+
+  {{ if .Pages }}
+  <div class="cards events-grid">
+    {{ range .Pages.ByDate.Reverse }}
+      <article class="card event-card">
+        <header class="card-head">
+          <h3 class="card-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h3>
+          <time class="card-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        </header>
+
+        <div class="card-meta">
+          {{ with .Params.tags }}
+            <div class="card-tags">
+              {{ range $i, $t := . }}
+                <span class="tag">{{ $t }}</span>{{ if lt (add $i 1) (len .) }}, {{ end }}
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+
+        <footer class="card-actions">
+          <a class="btn btn-primary" href="{{ .RelPermalink }}">Mehr</a>
+        </footer>
+      </article>
+    {{ end }}
+  </div>
+  {{ else }}
+    <p class="muted">Zurzeit sind keine Events vorhanden.</p>
+  {{ end }}
 </section>
 {{ end }}

@@ -180,3 +180,47 @@ a:focus, button:focus { outline:3px solid rgba(0,255,140,0.16); outline-offset:2
 
 /* stell sicher, dass Inhalt darüber liegt */
 .hero .container { position: relative; z-index: 2; }
+
+/* Events Kachel Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* einzelne Kachel */
+.event-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 140px;
+}
+
+/* Kopf: Titel + Datum */
+.card-head { margin-bottom: .6rem; }
+.card-title { font-family: var(--mono); font-size: 1.05rem; margin: 0 0 .25rem 0; color: var(--neon); }
+.card-title a { color: inherit; text-decoration: none; }
+.card-title a:hover { text-decoration: underline; }
+
+.card-date { font-size: .85rem; color: var(--subtext); }
+
+/* Tags */
+.card-tags { margin-top: .5rem; color: var(--subtext); font-size: .9rem; }
+.tag { display: inline-block; background: rgba(25,178,178,0.08); color: var(--primary); padding: .15rem .45rem; border-radius: 999px; font-weight:700; font-size:.85rem; }
+
+/* Footer / Aktionen */
+.card-actions { margin-top: .8rem; display:flex; justify-content:flex-end; gap:.5rem; }
+.btn { padding:.5rem .8rem; border-radius:8px; text-decoration:none; font-weight:700; }
+.btn-primary { background: linear-gradient(90deg,var(--primary),var(--accent)); color: #061018; }
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .events-grid { grid-template-columns: 1fr; }
+  .event-card { min-height: 110px; }
+}

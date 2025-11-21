@@ -1,6 +1,6 @@
 +++
 title = "Offener Abend"
-date = 2025-11-27T20:00:00
+date = 2025-11-27
 location = "Wak‑Lab, Werkraum 2"
 tags = ["community", "einsteiger"]
 +++

@@ -3,6 +3,7 @@ title = "Laser-Cutter Einführung"
 date = 2025-12-05
 location = "Wak‑Lab, Werkraum 1"
 tags = ["workshop", "laser", "maker"]
+status = "aktiv"
 +++
 
 Einführung in unseren Laser‑Cutter: Bedienung, Sicherheit, Software und erste Schnitte.  

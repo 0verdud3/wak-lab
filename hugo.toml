@@ -52,3 +52,6 @@ defaultContentLanguage = "de"
     name = "Suche"
     url = "/wak-lab/suche/"
     weight = 60
+
+# outputs sicherstellen
+outputs = { home = ["HTML"], section = ["HTML"], page = ["HTML"] }

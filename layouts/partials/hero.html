@@ -29,8 +29,8 @@
         <div class="info-card">
           <h3>Neueste Events</h3>
             <p>
-              {{ range first 6 (where .Site.Pages "Section" "events") }}
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a> — {{ .Date.Format "2006-01-02" }}
+              {{ range first 6 (where .Site.RegularPages  "Section" "events") }}
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a> — {{ .Date.Format "2006-01-02" }}</p></br>
               {{ end }}
             </p>
         </div>

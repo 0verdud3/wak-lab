@@ -1,6 +1,6 @@
 +++
 title = "offener Abend"
-date = 2025-10-27
+date = 2025-10-21
 tags = ["einsteiger", "community"]
 status = "aktiv"
 +++

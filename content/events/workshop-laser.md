@@ -1,6 +1,6 @@
 +++
 title = "Laser-Cutter Einführung"
-date = 2025-10-27
+date = 2025-10-21
 tags = ["workshop", "laser", "maker"]
 status = "aktiv"
 +++

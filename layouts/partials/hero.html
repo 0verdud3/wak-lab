@@ -26,6 +26,14 @@
           <h3>Projekte</h3>
           <p>Elektronik, Firmware, Workshops und Open‑Source.</p>
         </div>
+        <div class="info-card">
+          <h3>Neueste Events</h3>
+            <ul>
+              {{ range first 6 (where .Site.Pages "Section" "events") }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> — {{ .Date.Format "2006-01-02" }}</li>
+              {{ end }}
+            </ul>
+        </div>
       </div>
     </div>
   </aside>
